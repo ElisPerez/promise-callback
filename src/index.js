@@ -1,6 +1,10 @@
-import { greet } from './js/components';
 import './css/style.css';
+import { searchHero } from './js/callbacks';
 
-const name = 'Elis Antonio!!!';
+const hero1 = 'cap'
 
-greet(name);
+searchHero(hero1, (hero) => {
+  console.log('Callback llamado', hero);
+})
+
+console.log('End of the program');
