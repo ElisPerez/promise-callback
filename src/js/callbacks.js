@@ -13,6 +13,7 @@ const heroes = {
   },
 };
 
+// La funcion "callback" es definida por la funcion que llamó a esta funcion "searchHero". "searchHero" solamente debe de llamar el callback al final con los argumentos definidos (error, hero)
 export const searchHero = (heroID, callback) => {
   const hero = heroes[heroID];
 
