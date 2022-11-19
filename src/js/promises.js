@@ -3,7 +3,7 @@ const heroes = {
     name: 'Captain America',
     power: 'Aguantar inyecciones sin morir',
   },
-  iro: {
+  iron: {
     name: 'Ironman',
     power: 'Absurda cantidad de dinero',
   },
