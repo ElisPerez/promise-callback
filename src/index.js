@@ -1,11 +1,6 @@
 import './css/style.css';
-import { getArrayHeroes, getHeroAwait } from './js/await-handleError';
+import { heroesLoop, heroesIfAwait } from './js/await';
 
-console.time('await'); // El nombre 'await' en el time es la variable
+heroesLoop();
 
-getHeroAwait('cap2')
-  .then(hero => {
-    console.log('HERO:', hero);
-    console.timeEnd('await'); // en el timeEnd el argumento es la misma que en el time
-  })
-  .catch(console.warn);
+heroesIfAwait('iron');
