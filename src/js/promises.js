@@ -19,7 +19,9 @@ export const searchHero = heroID => {
   // La promesa recibe un callback, ese callback recibe 2 argumento: resolver/rechazar la promesa.
   return new Promise((resolve, reject) => {
     if (hero) {
-      resolve(hero);
+      setTimeout(() => {
+        resolve(hero);
+      }, 1000);
     } else {
       reject(`No existe heroe con el id ${heroID}`);
     }

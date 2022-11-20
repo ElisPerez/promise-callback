@@ -1,4 +1,11 @@
 import './css/style.css';
 import { getArrayHeroes } from './js/await';
 
-getArrayHeroes().then(console.table);
+console.time('await');
+
+getArrayHeroes().then((heroes) => {
+
+  console.table(heroes)
+  console.timeEnd('await');
+}
+);
