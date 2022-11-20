@@ -2,18 +2,13 @@ import { searchHeroAsync } from './promises';
 
 const heroesIDs = ['cap', 'iron', 'spider'];
 
-export const getArrayHeroes = () => {
+export const getArrayHeroes = async () => {
   const heroesArray = [];
 
   for (const id of heroesIDs) {
-    searchHeroAsync(id)
-      .then(hero => heroesArray.push(hero));
+    const hero = await searchHeroAsync(id);
+    heroesArray.push(hero);
   }
-
-  setTimeout(() => {
-    console.log('from: getArrayHeroes');
-    console.table(heroesArray);
-  }, 1000);
 
   return heroesArray;
 };
