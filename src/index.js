@@ -1,10 +1,6 @@
 import './css/style.css';
-import { searchHero, searchHeroAsync } from './js/promises';
+import { getArrayHeroes } from './js/await';
 
-searchHero('cap')
-  .then(hero => console.log(hero))
-  .catch(console.warn);
+const heroes = getArrayHeroes();
 
-searchHeroAsync('iron2')
-  .then(hero => console.log(hero))
-  .catch(console.warn) // Lanza Error porque iron2 no existe en la db.
+console.log(heroes);
