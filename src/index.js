@@ -3,4 +3,4 @@ import { getArrayHeroes } from './js/await';
 
 const heroes = getArrayHeroes();
 
-console.log(heroes);
+console.table(heroes);

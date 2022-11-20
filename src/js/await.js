@@ -7,8 +7,13 @@ export const getArrayHeroes = () => {
 
   for (const id of heroesIDs) {
     searchHeroAsync(id)
-      .then(hero => heroesArray.push(hero))
+      .then(hero => heroesArray.push(hero));
   }
+
+  setTimeout(() => {
+    console.log('from: getArrayHeroes');
+    console.table(heroesArray);
+  }, 1000);
 
   return heroesArray;
 };
