@@ -25,3 +25,17 @@ export const searchHero = heroID => {
     }
   });
 };
+
+const promiseSlow = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('Promise Slow'), 2000);
+});
+
+const promiseMedia = new Promise((resolve, reject) => {
+  setTimeout(() => reject('Promise Media'), 1500);
+});
+
+const promiseFast = new Promise((resolve, reject) => {
+  setTimeout(() => resolve('Promise Fast'), 1000);
+});
+
+export { promiseSlow, promiseMedia, promiseFast };
