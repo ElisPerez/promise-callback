@@ -19,4 +19,4 @@ const heroesIDs = ['cap', 'iron', 'spider'];
 // };
 
 // También se puede resumir en una linea:
-export const getArrayHeroes = async () =>  await Promise.all(heroesIDs.map(searchHero));
+export const getArrayHeroes = async () => await Promise.all(heroesIDs.map(searchHero));
