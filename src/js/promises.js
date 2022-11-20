@@ -26,12 +26,22 @@ export const searchHero = heroID => {
   });
 };
 
+export const searchHeroAsync = async heroID => {
+  const hero = heroes[heroID];
+
+  if (hero) {
+    return hero;
+  } else {
+    throw Error(`No existe heroe con el id ${heroID}`);
+  }
+};
+
 const promiseSlow = new Promise((resolve, reject) => {
   setTimeout(() => resolve('Promise Slow'), 2000);
 });
 
 const promiseMedia = new Promise((resolve, reject) => {
-  setTimeout(() => reject('Promise Media'), 1500);
+  setTimeout(() => resolve('Promise Media'), 1500);
 });
 
 const promiseFast = new Promise((resolve, reject) => {
