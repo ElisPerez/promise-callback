@@ -11,6 +11,12 @@ export const getHeroAwait = async id => {
     const hero = await searchHeroAsync(id);
     return hero;
   } catch (error) {
-    throw error;
+    // throw error;
+    console.log('CATCH!!!');
+    // Para no lanzar un error tambien se puede retornar un valor por defecto:
+    return {
+      name: 'Without name',
+      power: 'Without power',
+    };
   }
 };
